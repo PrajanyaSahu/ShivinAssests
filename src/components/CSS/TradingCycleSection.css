@@ -1,0 +1,116 @@
+:root {
+  --blue: #2176ff;
+  --soft-blue: #e6f0fa;
+  --heading: #172554;
+  --border-color: #c8ddff;
+  --highlight-blue: #3386ff;
+  --box-shadow: 0 2px 12px rgba(33, 118, 255, 0.08);
+}
+
+/* Section container */
+.calculator-section {
+  background-color: #f3f7fa;
+  padding: 48px 16px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Title */
+.calculator-title {
+  margin: 0 0 20px;
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  color: var(--blue);
+  text-shadow: 0 1px 6px rgba(33, 118, 255, 0.1);
+}
+
+/* Box wrapper */
+.calculator-box {
+  max-width: 480px;
+  margin: 0 auto;
+  background: var(--soft-blue);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: var(--box-shadow);
+  box-sizing: border-box;
+}
+
+/* Subtitle */
+.calculator-subtitle {
+  text-align: center;
+  color: var(--blue);
+  font-weight: 600;
+  font-size: 1rem;
+  margin-bottom: 16px;
+}
+
+/* Input container */
+.calculator-input-container {
+  text-align: center;
+  margin-bottom: 18px;
+  width: 100%;
+}
+
+/* Input */
+.calculator-input {
+  width: 100%;
+  max-width: 340px;
+  padding: 11px 14px;
+  font-size: 1.05rem;
+  border: 1.5px solid var(--blue);
+  border-radius: 8px;
+  text-align: center;
+  color: var(--heading);
+  background: #fff;
+  box-sizing: border-box;
+  box-shadow: 0 1px 6px rgba(33, 118, 255, 0.08);
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.calculator-input:focus {
+  outline: none;
+  border-color: #125de6;
+  box-shadow: 0 0 0 2px rgba(33, 118, 255, 0.2);
+}
+
+/* Result text */
+.calculator-result {
+  color: var(--heading);
+  text-align: center;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.text-blue {
+  color: var(--blue);
+}
+
+.text-soft-blue {
+  color: var(--highlight-blue);
+}
+
+.text-heading {
+  color: var(--heading);
+}
+
+/* Responsive layout */
+@media (max-width: 480px) {
+  .calculator-title {
+    font-size: 1.5rem;
+  }
+
+  .calculator-box {
+    padding: 20px;
+  }
+
+  .calculator-input {
+    font-size: 1rem;
+    padding: 10px 12px;
+  }
+
+  .calculator-result {
+    font-size: 0.95rem;
+  }
+}

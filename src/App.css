@@ -1,0 +1,335 @@
+body, #root {
+  background: #f8fafd;         /* Off-white/light-blue background */
+  color: #222;                 /* Black text */
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+  margin: 0;
+  min-height: 100vh;
+  padding-top: 0px;
+  scroll-behavior: smooth;
+}
+
+html, body {
+  overflow-x: hidden !important;
+}
+
+a {
+  color: #2176ff;             /* Primary blue accent */
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+a:hover {
+  color: #0b2c51;             /* Deeper blue on hover */
+}
+
+.section {
+  padding: 80px 0 60px 0;
+  min-height: 80vh;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 1;
+  background: #f8fafd;        /* Match main background */
+}
+
+.section-title {
+  font-size: 2.7rem;
+  font-weight: 700;
+  margin-bottom: 32px;
+  color: #2176ff;            /* Blue highlight for headings */
+  text-align: center;
+  letter-spacing: 1.2px;
+}
+
+.green-btn {
+  background: linear-gradient(90deg, #2176ff, #73abff 90%);
+  color: #fff;
+  border: none;
+  padding: 14px 36px;
+  border-radius: 40px;
+  font-weight: 600;
+  font-size: 1.12rem;
+  cursor: pointer;
+  margin-top: 28px;
+  transition: background 0.25s, transform 0.15s;
+  box-shadow: 0 4px 16px #2176ff22, 0 2px 12px #0b2c5122;
+}
+
+.green-btn:hover {
+  background: linear-gradient(90deg, #73abff, #2176ff 90%);
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 8px 24px #2176ff40;
+}
+
+.card-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 36px;
+  justify-content: center;
+  align-items: stretch;
+}
+
+.card {
+  background: #fff; /* White card for contrast */
+  border-radius: 18px;
+  padding: 32px 28px;
+  box-shadow: 0 4px 18px #2176ff18;
+  color: #222;        /* Black text */
+  min-width: 270px;
+  max-width: 340px;
+  flex: 1;
+  border: 1px solid #d5e4fa;
+  transition: box-shadow 0.25s, transform 0.2s;
+  position: relative;
+}
+
+.card:hover {
+  box-shadow: 0 12px 34px #2176ff35, 0 2px 18px #73abff22;
+  transform: translateY(-2px) scale(1.025);
+}
+
+footer {
+  background: #e9f0fa;
+  color: #2176ff;
+  text-align: center;
+  padding: 48px 0 24px 0;
+  font-size: 1.1rem;
+  border-top: 2px solid #2176ff;
+  margin-top: 64px;
+  letter-spacing: 0.04rem;
+}
+
+/* Sticky navbar styling */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  background: #e9f0faee;
+  z-index: 1000;
+  box-shadow: 0 4px 12px #2176ff11;
+  border-bottom: 1.5px solid #2176ff;
+}
+
+nav > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1240px;
+  margin: 0 auto;
+  height: 68px;
+  padding: 0 30px;
+}
+
+nav a {
+  color: #222;
+  font-weight: 500;
+  text-decoration: none;
+  font-size: 1.08rem;
+  padding: 8px 0;
+  margin: 0 8px;
+  transition: color 0.2s;
+}
+
+nav a:hover {
+  color: #2176ff;
+}
+
+nav span {
+  font-weight: 800;
+  font-size: 1.33rem;
+  color: #2176ff;
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+
+/* Responsive for mobile */
+@media (max-width: 800px) {
+  .section {
+    padding: 60px 0 40px 0;
+  }
+  .section-title {
+    font-size: 2rem;
+  }
+  .card-list {
+    flex-direction: column;
+    gap: 22px;
+  }
+  .card {
+    max-width: 90vw;
+    min-width: unset;
+    padding: 22px 10px;
+  }
+  nav > div {
+    flex-direction: column;
+    height: auto;
+    gap: 10px;
+    padding: 0 8vw;
+  }
+  nav span {
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+  }
+}
+
+@media (max-width: 540px) {
+  .section {
+    padding: 34px 0 18px 0;
+  }
+  .card {
+    padding: 15px 3vw;
+  }
+  .section-title {
+    font-size: 1.23rem;
+  }
+  nav > div {
+    padding: 0 2vw;
+  }
+}
+
+/* Agreement Form Special Styles */
+.agreement-label {
+  font-weight: 600;
+  color: #2176ff;
+}
+
+.agreement-input {
+  border: none;
+  border-bottom: 1.5px solid #2176ff;
+  background: none;
+  min-width: 120px;
+  font-size: 1rem;
+  margin-left: 8px;
+  color: #0b2c51;
+  outline: none;
+}
+.agreement-input:focus {
+  border-bottom: 2px solid #0b2c51;
+  background: #f2f8fd;
+}
+
+.contact-label {
+  color: #2176ff;
+  font-weight: 600;
+  font-size: 1.08rem;
+  margin-bottom: 5px;
+  display: block;
+}
+.contact-input {
+  width: 100%;
+  padding: 11px 14px;
+  border-radius: 12px;
+  border: 1.5px solid #b2cef7;
+  margin-bottom: 10px;
+  background: #f4f8fd;
+  color: #222;
+  font-size: 1.1rem;
+  outline: none;
+  transition: border 0.18s;
+}
+.contact-input:focus {
+  border: 2px solid #2176ff;
+  background: #e9f0fa;
+}
+textarea.contact-input {
+  min-height: 76px;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+body::-webkit-scrollbar {
+  width: 0 !important;
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+body {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+/* Navbar Responsive (add these below your current navbar styles) */
+.navbar-custom {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  background: #f6f9fbf2;
+  z-index: 99;
+  box-shadow: 0 4px 12px #2176ff13;
+  padding: 0;
+  border-bottom: 1.5px solid #2176ff;
+}
+
+.navbar-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1240px;
+  margin: 0 auto;
+  height: 68px;
+  padding: 0 30px;
+  position: relative;
+}
+
+.hamburger-menu {
+  display: none;
+}
+
+@media (max-width: 800px) {
+  .navbar-inner {
+    padding: 0 2vw;
+  }
+  .nav-links {
+    display: none !important;
+  }
+  .hamburger-menu {
+    display: flex !important;
+  }
+  /* Overlay for mobile nav */
+  .mobile-nav-overlay {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(34,53,84,0.13);
+    z-index: 1200;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+  }
+  .mobile-nav-panel {
+    background: #fff;
+    min-width: 68vw;
+    max-width: 94vw;
+    margin: 16px 8px 0 0;
+    border-radius: 14px;
+    box-shadow: 0 8px 36px #2176ff44;
+    padding: 26px 0 14px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 20px;
+    animation: slideInMenu .25s cubic-bezier(.44,1.7,.4,.85);
+  }
+  .mobile-nav-panel a {
+    color: #2176ff;
+    font-weight: 700;
+    font-size: 1.18rem;
+    text-align: left;
+    padding: 12px 24px;
+    border-radius: 7px;
+    text-decoration: none;
+    transition: background 0.15s, color 0.17s;
+  }
+  .mobile-nav-panel a:hover {
+    background: #e9f3ff;
+    color: #073c89;
+  }
+}
+
+@keyframes slideInMenu {
+  from {
+    transform: translateY(-36px) scale(.97);
+    opacity: 0;
+  }
+  to {
+    transform: none;
+    opacity: 1;
+  }
+}

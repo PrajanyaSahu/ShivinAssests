@@ -1,0 +1,130 @@
+:root {
+  --blue: #2176ff;
+  --blue-light: #5ca2f7;
+  --bg-light: #f3f7fa;
+  --card-bg: #e9f0fa;
+  --shadow: 0 6px 20px rgba(33, 118, 255, 0.12);
+  --text-dark: #222;
+  --heading: #172554;
+}
+
+.process-section {
+  background: linear-gradient(180deg, var(--bg-light) 80%, #e3eeff 100%);
+  padding: 80px 20px;
+  box-sizing: border-box;
+}
+
+.process-title {
+  color: var(--blue);
+  font-weight: 800;
+  font-size: 2.3rem;
+  margin-bottom: 40px;
+  text-align: center;
+  letter-spacing: 1.2px;
+  position: relative;
+}
+
+.process-underline {
+  display: block;
+  margin: 8px auto 0;
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--blue) 10%, var(--blue-light) 90%);
+  border-radius: 6px;
+  opacity: 0.65;
+}
+
+.process-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 24px;
+  padding: 0 12px;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+
+.process-card {
+  position: relative;
+  flex: 1 1 260px;
+  max-width: 280px;
+  background: linear-gradient(170deg, var(--card-bg) 85%, #d2e7fa 100%);
+  border: 1.5px solid #b2cef7;
+  box-shadow: var(--shadow);
+  border-radius: 14px;
+  padding: 28px 24px 24px 24px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  min-height: 240px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  cursor: default;
+}
+
+.process-card:hover {
+  transform: scale(1.04);
+  box-shadow: 0 10px 26px rgba(33, 118, 255, 0.18);
+}
+
+.process-step-circle {
+  position: absolute;
+  top: -18px;
+  left: -18px;
+  width: 44px;
+  height: 44px;
+  background: linear-gradient(135deg, var(--blue-light) 60%, var(--blue) 100%);
+  border-radius: 50%;
+  border: 2px solid white;
+  box-shadow: 0 4px 14px rgba(33, 118, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.process-step-circle span {
+  font-size: 1.2rem;
+  font-weight: 900;
+  color: white;
+}
+
+.process-step-title {
+  color: var(--blue);
+  font-weight: 700;
+  font-size: 1.15rem;
+  margin: 0 0 8px;
+}
+
+.process-step-desc {
+  color: var(--text-dark);
+  font-size: 1.04rem;
+  line-height: 1.6;
+  opacity: 0.95;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .process-grid {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .process-card {
+    max-width: 100%;
+  }
+
+  .process-title {
+    font-size: 1.9rem;
+  }
+
+  .process-step-title {
+    font-size: 1.05rem;
+  }
+
+  .process-step-desc {
+    font-size: 0.95rem;
+  }
+}
